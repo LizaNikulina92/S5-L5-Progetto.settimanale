@@ -57,6 +57,7 @@ background-color: #fff;
 
 .show {
     /* agganciare animation-name rotazione carta */
+    animation-name: rotazione-carta;
     color: rgb(0, 0, 0);
     animation-duration: .5s;
     background-color: white;
@@ -66,6 +67,7 @@ background-color: #fff;
 
 .find {
     /* agganciare animation-name indovinato */
+    animation-name: indovinato;
     animation-duration: .5s;
     background-color: rgba(247, 212, 16, 0.56);
     border: 1px solid #3889c4;
@@ -138,17 +140,17 @@ background-color: #fff;
 }
 
 @keyframes indovinato { /* animazione quando si indovina */
-    from {
+    from {transform: scale(1);
     }
-    to {
+    to {transform: scale(1.1);
     }
 }
 
 @keyframes rotazione-carta { /* animazione quando ruota la carta */
-    from {
+    from {transform: rotateY(0deg);
     }
-    50% {
+    50% {transform: rotateY(90deg);
     }
-    to {
+    to {transform: rotateY(180deg);
     }
 }

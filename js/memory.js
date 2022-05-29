@@ -174,8 +174,7 @@ allCards.forEach(card => {
     card.addEventListener('click', function(){
         let winGame = document.querySelector('#modal');
         let cardChecked = document.getElementsByClassName('find');
-        console.log(cardChecked.length);
-        if(cardChecked.length === 2){
+        if(cardChecked.length === 24){
             winGame.style.display = 'block';
             clearInterval(timer);
             document.querySelector('#tempoTrascorso').innerHTML = (min > 9 ? min : +min ) + ' min ' + (sec > 9 ? sec : +sec) + ' sec';
